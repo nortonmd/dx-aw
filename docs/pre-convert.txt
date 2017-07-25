@@ -1,0 +1,92 @@
+.
+├── README.md
+├── config
+│   └── project-scratch-def.json
+├── docs
+│   └── pre-convert.txt
+├── force-app
+│   └── main
+│       └── default
+│           └── aura
+├── mdapi
+│   ├── applications
+│   │   └── Agile_Way.app
+│   ├── classes
+│   │   ├── BacklogItemTaskHelper.cls
+│   │   ├── BacklogItemTaskHelper.cls-meta.xml
+│   │   ├── CapacityHelper.cls
+│   │   └── CapacityHelper.cls-meta.xml
+│   ├── documents
+│   │   ├── SharedDocuments
+│   │   │   ├── Agile_Way_Logo.jpg
+│   │   │   └── Agile_Way_Logo.jpg-meta.xml
+│   │   └── SharedDocuments-meta.xml
+│   ├── layouts
+│   │   ├── Business_Request__c-Business Request Layout.layout
+│   │   ├── CM_Backlog_Item__c-Backlog Item Layout.layout
+│   │   ├── CM_Bug__c-Bug Layout.layout
+│   │   ├── CM_Capacity__c-Capacity Layout.layout
+│   │   ├── CM_Component__c-Boomi Component.layout
+│   │   ├── CM_Component__c-Component Layout.layout
+│   │   ├── CM_Component__c-Salesforce Component.layout
+│   │   ├── CM_Feature__c-Feature Layout.layout
+│   │   ├── CM_Requirement__c-Requirement Layout.layout
+│   │   ├── CM_Sprint__c-Sprint Layout.layout
+│   │   ├── Deliverable__c-Deliverable Layout.layout
+│   │   ├── Partner_Request__c-Partner Request Environment Access Layout.layout
+│   │   ├── Partner_Request__c-Partner Request Layout.layout
+│   │   ├── Partner_Request__c-Partner Request New Environment Layout.layout
+│   │   ├── Partner_Request__c-Partner Request URL Change Layout.layout
+│   │   ├── Phase__c-Phase Layout.layout
+│   │   ├── Project__c-Project Layout.layout
+│   │   ├── Source_Component__c-Source Component Layout.layout
+│   │   ├── Stage__c-Stage Layout.layout
+│   │   └── Use_Case__c-Use Case Layout.layout
+│   ├── objects
+│   │   ├── Activity.object
+│   │   ├── Business_Request__c.object
+│   │   ├── CM_Backlog_Item__c.object
+│   │   ├── CM_Bug__c.object
+│   │   ├── CM_Capacity__c.object
+│   │   ├── CM_Component__c.object
+│   │   ├── CM_Feature__c.object
+│   │   ├── CM_Requirement__c.object
+│   │   ├── CM_Sprint__c.object
+│   │   ├── Deliverable__c.object
+│   │   ├── Partner_Request__c.object
+│   │   ├── Phase__c.object
+│   │   ├── Project__c.object
+│   │   ├── Source_Component__c.object
+│   │   ├── Stage__c.object
+│   │   └── Use_Case__c.object
+│   ├── package.xml
+│   ├── tabs
+│   │   ├── Business_Request__c.tab
+│   │   ├── CM_Backlog_Item__c.tab
+│   │   ├── CM_Bug__c.tab
+│   │   ├── CM_Feature__c.tab
+│   │   ├── CM_Sprint__c.tab
+│   │   ├── Deliverable__c.tab
+│   │   ├── Partner_Request__c.tab
+│   │   ├── Phase__c.tab
+│   │   ├── Project__c.tab
+│   │   ├── Stage__c.tab
+│   │   └── Use_Case__c.tab
+│   └── triggers
+│       ├── BacklogItemStatusChange.trigger
+│       ├── BacklogItemStatusChange.trigger-meta.xml
+│       ├── BugEmailNotification.trigger
+│       ├── BugEmailNotification.trigger-meta.xml
+│       ├── BusinessRequestSpawnBacklogItem.trigger
+│       ├── BusinessRequestSpawnBacklogItem.trigger-meta.xml
+│       ├── CapacityDuplicateCheck.trigger
+│       ├── CapacityDuplicateCheck.trigger-meta.xml
+│       ├── ComponentTrack.trigger
+│       ├── ComponentTrack.trigger-meta.xml
+│       ├── RequirementNotifyAssigneeOnChange.trigger
+│       ├── RequirementNotifyAssigneeOnChange.trigger-meta.xml
+│       ├── SprintUpdateDates.trigger
+│       └── SprintUpdateDates.trigger-meta.xml
+└── sfdx-project.json
+
+15 directories, 74 files
