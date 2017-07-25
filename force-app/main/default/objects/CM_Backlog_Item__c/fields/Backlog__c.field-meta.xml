@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backlog__c</fullName>
+    <externalId>false</externalId>
+    <label>Backlog</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Boomi Technical Backlog</fullName>
+                <default>false</default>
+                <label>Boomi Technical Backlog</label>
+            </value>
+            <value>
+                <fullName>Salesforce Operations</fullName>
+                <default>false</default>
+                <label>Salesforce Operations</label>
+            </value>
+            <value>
+                <fullName>Membership Project</fullName>
+                <default>false</default>
+                <label>Membership Project</label>
+            </value>
+            <value>
+                <fullName>Enterprise Payments</fullName>
+                <default>false</default>
+                <label>Enterprise Payments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

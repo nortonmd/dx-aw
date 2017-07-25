@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BacklogItem_Status_Check</fullName>
+    <active>false</active>
+    <description>Makes sure the Backlog Item has components before advancing status to Ready For QA or Ready For Deploy</description>
+    <errorConditionFormula>AND(   ISPICKVAL(Category__c, 'Code'),
+Component_Count__c  = 0 , 
+     OR(ISPICKVAL(Status__c, 'Ready for QA'), 
+            ISPICKVAL(Status__c, 'Passed QA/Done')))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Please attach your code components before setting the status to either 'Ready for QA' or 'Passed QA/Done'.</errorMessage>
+</ValidationRule>

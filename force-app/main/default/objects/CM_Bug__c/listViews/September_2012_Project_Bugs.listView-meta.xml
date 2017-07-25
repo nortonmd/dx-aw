@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>September_2012_Project_Bugs</fullName>
+    <columns>NAME</columns>
+    <columns>BackLog_Number__c</columns>
+    <columns>Sprint__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Status__c</columns>
+    <columns>Description__c</columns>
+    <columns>Backlog_Item__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Sprint__c</field>
+        <operation>contains</operation>
+        <value>September 2012</value>
+    </filters>
+    <label>September 2012 Project Bugs</label>
+</ListView>

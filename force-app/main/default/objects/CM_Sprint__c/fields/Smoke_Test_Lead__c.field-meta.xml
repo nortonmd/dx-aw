@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Smoke_Test_Lead__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Developer who is charged with validating all smoke tests during deploys.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Developer who is charged with validating all smoke tests during deploys.</inlineHelpText>
+    <label>Smoke Test Lead</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Sprints</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

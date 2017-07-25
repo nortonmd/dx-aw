@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Git_Diff_Command_Line__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  ISPICKVAL(Deployment_Action__c, 'Update'),
+"git difftool " + Backlog_Item__r.Sprint__r.Base_Tag__c + " " +
+CASE(
+     TEXT(Component_Type__c ), 'Class', 'src/classes', 'Test Class', 'src/classes', 'Page', 'src/pages', 'Trigger', 'src/triggers', 'Component', 'src/components', 'Apex: Anonymous Script', 'scripts', 'other'
+            )
+ + "/" +  Name,
+'Not Available on Create')</formula>
+    <label>Git Diff Command Line</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Impact_Summary__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Describe the impact or expected impact of the backlog item to the Member Experience - Metrics and Reporting group.</inlineHelpText>
+    <label>Reporting Impact Summary</label>
+    <length>32000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

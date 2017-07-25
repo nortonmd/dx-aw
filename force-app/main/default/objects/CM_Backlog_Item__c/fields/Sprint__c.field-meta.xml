@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprint__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Which backlog items are assigned to each Sprint.  Not mandatory.</description>
+    <externalId>false</externalId>
+    <label>Sprint</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>CM_Sprint__c.Active__c</field>
+            <operation>equals</operation>
+            <value>true</value>
+        </filterItems>
+        <infoMessage>Please use an active sprint</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>CM_Sprint__c</referenceTo>
+    <relationshipLabel>Backlog Items</relationshipLabel>
+    <relationshipName>Backlog_Items</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

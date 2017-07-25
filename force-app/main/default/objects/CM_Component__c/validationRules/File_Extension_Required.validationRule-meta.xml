@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>File_Extension_Required</fullName>
+    <active>true</active>
+    <description>This rule ensures that the developer includes a file extension for components of component type "Class" (.class), "Test Class" (.class), "Page" (.page), "Trigger"(.trigger), "Component"(.component), "Apex: Anonymous Script" (.anon)</description>
+    <errorConditionFormula>NOT(
+    CONTAINS( Name, 
+           CASE(TEXT(Component_Type__c ), 
+                 'Class', '.cls', 
+                 'Test Class', '.cls', 
+                 'Page', '.page', 
+                 'Trigger', '.trigger', 
+                 'Component', '.component', 
+                'Apex: Anonymous Script', '.anon',
+                 Name
+          ) 
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Please include a file extension in the Name of the component. (.cls, .page, .trigger, .component, .anon)</errorMessage>
+</ValidationRule>

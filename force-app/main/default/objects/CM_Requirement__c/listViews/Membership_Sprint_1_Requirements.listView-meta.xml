@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Sprint_1_Requirements</fullName>
+    <columns>NAME</columns>
+    <columns>Backlog_Item__c</columns>
+    <columns>Backlog_Item_Assignee__c</columns>
+    <columns>Status__c</columns>
+    <columns>Description__c</columns>
+    <columns>Acceptance_Criteria__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>equals</operation>
+        <value>Membership Subscription Platform</value>
+    </filters>
+    <filters>
+        <field>Sprint__c</field>
+        <operation>equals</operation>
+        <value>Membership - Sprint 1</value>
+    </filters>
+    <label>Membership Sprint 1 Requirements</label>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Github_com_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  Requires_Review__c, 
+HYPERLINK( "https://github.com/aaancnu/mrm/blob/master/" +
+CASE(
+TEXT(Component_Type__c ), 'Class', 'src/classes', 'Test Class', 'src/classes', 'Page', 'src/pages', 'Trigger', 'src/triggers', 'Component', 'src/components', 'Apex: Anonymous Script', 'scripts',  'Static Resource', 'src/staticresources', 'other'
+)
++ "/" + Name, "File on Github.com"),
+"Not stored on Github.com")</formula>
+    <label>Github.com Link</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

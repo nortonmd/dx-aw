@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR_ID__c</fullName>
+    <displayFormat>PR-{0000}</displayFormat>
+    <externalId>true</externalId>
+    <inlineHelpText>Automatically generated ID to track requests.</inlineHelpText>
+    <label>PR ID</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

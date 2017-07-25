@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Review</fullName>
+    <columns>BR_ID__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Category__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Requested_Implementation_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved by Business,Rejected</value>
+    </filters>
+    <label>Pending Review</label>
+</ListView>

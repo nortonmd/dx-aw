@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exit_Criteria__c</fullName>
+    <description>Key Capabilities / Deliverables</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For Stage 0, Planning, Discover and Define Phase this section is for the exiting Stage 0.  Otherwise, the exit criteria / key capabilities / deliverables are listed to determine what success looks like after implementation.</inlineHelpText>
+    <label>Exit Criteria</label>
+    <length>32768</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

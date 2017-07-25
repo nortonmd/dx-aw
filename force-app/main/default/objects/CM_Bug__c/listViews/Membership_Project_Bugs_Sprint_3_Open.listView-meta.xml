@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_Project_Bugs_Sprint_3_Open</fullName>
+    <columns>NAME</columns>
+    <columns>BackLog_Number__c</columns>
+    <columns>Sprint__c</columns>
+    <columns>Status__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Business_Priority__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Description__c</columns>
+    <columns>Backlog_Item__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sprint__c</field>
+        <operation>contains</operation>
+        <value>Membership - Sprint 3</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Fixed,Closed,Deferred,Rejected</value>
+    </filters>
+    <label>Membership Project Bugs - Sprint 3 Open</label>
+</ListView>

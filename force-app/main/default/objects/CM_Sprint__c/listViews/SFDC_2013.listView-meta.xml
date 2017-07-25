@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_2013</fullName>
+    <columns>NAME</columns>
+    <columns>Smoke_Test_Lead__c</columns>
+    <columns>Active__c</columns>
+    <columns>Project__c</columns>
+    <columns>Sprint_Planning_Date__c</columns>
+    <columns>Release_Date__c</columns>
+    <columns>Sprint_Demo_Date__c</columns>
+    <columns>QA_Deploy_Date__c</columns>
+    <columns>QA_Signoff_Date__c</columns>
+    <columns>UAT_Deploy_Date__c</columns>
+    <columns>UAT_Signoff_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>[SFDC]</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>2013</value>
+    </filters>
+    <label>[SFDC] 2013</label>
+</ListView>

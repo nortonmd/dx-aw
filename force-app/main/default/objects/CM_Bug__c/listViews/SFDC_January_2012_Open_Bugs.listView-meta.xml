@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_January_2012_Open_Bugs</fullName>
+    <columns>NAME</columns>
+    <columns>Priority__c</columns>
+    <columns>Status__c</columns>
+    <columns>Description__c</columns>
+    <columns>Backlog_Item__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Sprint__c</field>
+        <operation>equals</operation>
+        <value>[SFDC] January 2012</value>
+    </filters>
+    <label>SFDC January 2012 Open Bugs</label>
+</ListView>

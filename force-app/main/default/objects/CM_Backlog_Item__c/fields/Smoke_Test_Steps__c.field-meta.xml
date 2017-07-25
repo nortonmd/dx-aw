@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Smoke_Test_Steps__c</fullName>
+    <description>Describe the steps to validate that the attached functionality has been deployed properly.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Describe the steps to validate that the attached functionality has been deployed properly.</inlineHelpText>
+    <label>Smoke Test Steps</label>
+    <length>32000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>15</visibleLines>
+</CustomField>

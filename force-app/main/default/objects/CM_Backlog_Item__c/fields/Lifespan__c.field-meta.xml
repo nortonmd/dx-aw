@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lifespan__c</fullName>
+    <description>Used by business to show how long the backlog item will live.
+If an item is a lot of work and the lifespan is only three months, what is the value.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the expected lifespan of the delivered item (Permanent, 1-3 Months, Just until feature X is released, etc…)</inlineHelpText>
+    <label>Lifespan</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

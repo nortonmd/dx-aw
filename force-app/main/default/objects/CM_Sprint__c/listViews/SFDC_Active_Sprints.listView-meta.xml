@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_Active_Sprints</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Smoke_Test_Lead__c</columns>
+    <columns>Sprint_Planning_Date__c</columns>
+    <columns>Sprint_Demo_Date__c</columns>
+    <columns>QA_Deploy_Date__c</columns>
+    <columns>UAT_Deploy_Date__c</columns>
+    <columns>Release_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>[SFDC]</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>2012</value>
+    </filters>
+    <filters>
+        <field>Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>SFDC Active Sprints</label>
+</ListView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Deletes_Related_to_Address_Managemen</fullName>
+    <columns>NAME</columns>
+    <columns>Deployment_Action__c</columns>
+    <columns>Backlog_Item__c</columns>
+    <columns>Component_Type__c</columns>
+    <columns>Requires_Review__c</columns>
+    <columns>Code_Review_Date__c</columns>
+    <columns>Code_Reviewer__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Deployment_Action__c</field>
+        <operation>equals</operation>
+        <value>Delete</value>
+    </filters>
+    <filters>
+        <field>Backlog_Item__c</field>
+        <operation>equals</operation>
+        <value>Remove References to Address Management</value>
+    </filters>
+    <filters>
+        <field>Component_Type__c</field>
+        <operation>equals</operation>
+        <value>Object: Field</value>
+    </filters>
+    <label>All Deletes Related to Address Managemen</label>
+</ListView>

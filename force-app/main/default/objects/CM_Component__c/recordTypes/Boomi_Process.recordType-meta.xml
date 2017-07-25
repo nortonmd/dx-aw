@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Boomi_Process</fullName>
+    <active>true</active>
+    <description>Boomi Process/Sub Process</description>
+    <label>Boomi Process</label>
+    <picklistValues>
+        <picklist>Component_Type__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Sub Process</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deployment_Action__c</picklist>
+        <values>
+            <fullName>Deploy</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Deploy and Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revert</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

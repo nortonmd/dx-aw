@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Root_Cause__c</fullName>
+    <externalId>false</externalId>
+    <label>Root Cause</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Code Deployment</fullName>
+                <default>false</default>
+                <label>Code Deployment</label>
+            </value>
+            <value>
+                <fullName>Coding</fullName>
+                <default>false</default>
+                <label>Coding</label>
+            </value>
+            <value>
+                <fullName>Data Setup</fullName>
+                <default>false</default>
+                <label>Data Setup</label>
+            </value>
+            <value>
+                <fullName>Existing Production Issue</fullName>
+                <default>false</default>
+                <label>Existing Production Issue</label>
+            </value>
+            <value>
+                <fullName>Requirement Change</fullName>
+                <default>false</default>
+                <label>Requirement Change</label>
+            </value>
+            <value>
+                <fullName>Training Issue</fullName>
+                <default>false</default>
+                <label>Training Issue</label>
+            </value>
+            <value>
+                <fullName>User Access</fullName>
+                <default>false</default>
+                <label>User Access</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

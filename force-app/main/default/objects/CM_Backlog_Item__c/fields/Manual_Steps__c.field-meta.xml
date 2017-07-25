@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Steps__c</fullName>
+    <description>Manual changes necessary to ensure complete deployment (not changes that are resolved by simply deploying related "components").  Examples of manual steps include:  Running scripts, setting profile permissions, deleting obsolete objects, etc.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Manual changes necessary to ensure complete deployment (not changes that are resolved by simply deploying related "components").  Examples of manual steps include:  Running scripts, setting profile permissions, deleting obsolete objects, etc.</inlineHelpText>
+    <label>Manual Deployment Steps</label>
+    <length>32000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>15</visibleLines>
+</CustomField>

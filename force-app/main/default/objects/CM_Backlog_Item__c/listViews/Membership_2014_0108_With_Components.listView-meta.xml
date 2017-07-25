@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Membership_2014_0108_With_Components</fullName>
+    <columns>NAME</columns>
+    <columns>BackLog_ID__c</columns>
+    <columns>Jira_Ticket_ID__c</columns>
+    <columns>Jira_Link__c</columns>
+    <columns>Component_Count__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sprint__c</field>
+        <operation>equals</operation>
+        <value>Membership 2014-0108 Release</value>
+    </filters>
+    <filters>
+        <field>Component_Count__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <label>Membership 2014-0108 With Components</label>
+</ListView>

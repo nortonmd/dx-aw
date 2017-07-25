@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce_Component</fullName>
+    <active>true</active>
+    <description>Salesforce Component (Apex Class, Visualforce Page, Trigger, etc...)</description>
+    <label>Salesforce Component</label>
+    <picklistValues>
+        <picklist>Component_Type__c</picklist>
+        <values>
+            <fullName>Apex%3A Anonymous Script</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Component</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Tab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folder Item%3A Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folder Item%3A Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folder Item%3A Email Template</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folder Item%3A Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Page Component</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Page Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home Page Web Links</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Action Override</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Business Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Custom Button %28Weblink%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Custom Link %28Weblink%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Entire Object</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Field</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Field Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A ListView</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Named Filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Record Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Search Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object%3A Validation Rule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Page Layout</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Static Resource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trigger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow%3A Alert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow%3A Entire Workflow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow%3A Field Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow%3A Outbound Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow%3A Rule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow%3A Task</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deployment_Action__c</picklist>
+        <values>
+            <fullName>Create</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Impact__c</fullName>
+    <description>Each item will be ranked for by the CCB for these three items, and based on the score (how many are High) it moves the item up or down.  It would be a field used by the business only for this purpose.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Impact based on:  Member Impact Low or Member Impact High (ML or MH), Business Impact Low or Business Impact High (BL or BH), and Employee Impact Low or Employee Impact High (EL or EH).</inlineHelpText>
+    <label>Business Impact</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

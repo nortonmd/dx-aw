@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backlog_Item__c</fullName>
+    <description>This relationship shows the parent Backlog Item to which these components are associated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For which Backlog Item has this component been changed?</inlineHelpText>
+    <label>Backlog Item</label>
+    <referenceTo>CM_Backlog_Item__c</referenceTo>
+    <relationshipLabel>Components</relationshipLabel>
+    <relationshipName>Components</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

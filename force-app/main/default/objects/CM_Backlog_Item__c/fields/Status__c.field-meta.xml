@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>true</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Approved by Business</fullName>
+                <default>false</default>
+                <label>Approved by Business</label>
+            </value>
+            <value>
+                <fullName>Waiting On</fullName>
+                <default>false</default>
+                <label>Waiting On</label>
+            </value>
+            <value>
+                <fullName>Clarifying Req</fullName>
+                <default>false</default>
+                <label>Clarifying Req</label>
+            </value>
+            <value>
+                <fullName>Completed - Nothing to Deploy</fullName>
+                <default>false</default>
+                <label>Completed - Nothing to Deploy</label>
+            </value>
+            <value>
+                <fullName>Developer-Ready</fullName>
+                <default>false</default>
+                <label>Developer-Ready</label>
+            </value>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Ready for Feedback Demo</fullName>
+                <default>false</default>
+                <label>Ready for Feedback Demo</label>
+            </value>
+            <value>
+                <fullName>Ready to Demo</fullName>
+                <default>false</default>
+                <label>Ready to Demo</label>
+            </value>
+            <value>
+                <fullName>Ready for QA Deploy</fullName>
+                <default>false</default>
+                <label>Ready for QA Deploy</label>
+            </value>
+            <value>
+                <fullName>Ready for QA</fullName>
+                <default>false</default>
+                <label>Ready for QA</label>
+            </value>
+            <value>
+                <fullName>Passed QA / Ready for UAT Deploy</fullName>
+                <default>false</default>
+                <label>Passed QA / Ready for UAT Deploy</label>
+            </value>
+            <value>
+                <fullName>Ready for UAT</fullName>
+                <default>false</default>
+                <label>Ready for UAT</label>
+            </value>
+            <value>
+                <fullName>Passed UAT / Ready for Production Deploy</fullName>
+                <default>false</default>
+                <label>Passed UAT / Ready for Production Deploy</label>
+            </value>
+            <value>
+                <fullName>Deployed</fullName>
+                <default>false</default>
+                <label>Deployed</label>
+            </value>
+            <value>
+                <fullName>Defer next sprint</fullName>
+                <default>false</default>
+                <label>Defer next sprint</label>
+            </value>
+            <value>
+                <fullName>Defer Later</fullName>
+                <default>false</default>
+                <label>Defer Later</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deployment_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The deployment status</inlineHelpText>
+    <label>Deployment Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Deployed</fullName>
+                <default>false</default>
+                <label>Not Deployed</label>
+            </value>
+            <value>
+                <fullName>Deployed - In Use</fullName>
+                <default>false</default>
+                <label>Deployed - In Use</label>
+            </value>
+            <value>
+                <fullName>Deployed - Hidden</fullName>
+                <default>false</default>
+                <label>Deployed - Hidden</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

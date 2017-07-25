@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stream__c</fullName>
+    <description>This field specifies which deployment stream/path the change will follow.  For instance, if using the "Prod" stream, then development will begin on the "dev" org, and proceed thru to "froqa2" and finally "prod".</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose the development stream to which this sprint is related.</inlineHelpText>
+    <label>Stream</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prod</fullName>
+                <default>true</default>
+                <label>Prod</label>
+            </value>
+            <value>
+                <fullName>Membership</fullName>
+                <default>false</default>
+                <label>Membership</label>
+            </value>
+            <value>
+                <fullName>MP2</fullName>
+                <default>false</default>
+                <label>MP2</label>
+            </value>
+            <value>
+                <fullName>MX</fullName>
+                <default>false</default>
+                <label>MX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

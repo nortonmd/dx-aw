@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Rejection__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Rejection</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Changed Requirement</fullName>
+                <default>false</default>
+                <label>Changed Requirement</label>
+            </value>
+            <value>
+                <fullName>Environment Issue</fullName>
+                <default>false</default>
+                <label>Environment Issue</label>
+            </value>
+            <value>
+                <fullName>Functionality Out of Scope</fullName>
+                <default>false</default>
+                <label>Functionality Out of Scope</label>
+            </value>
+            <value>
+                <fullName>Incorrect Data</fullName>
+                <default>false</default>
+                <label>Incorrect Data</label>
+            </value>
+            <value>
+                <fullName>Misunderstood Requirement</fullName>
+                <default>false</default>
+                <label>Misunderstood Requirement</label>
+            </value>
+            <value>
+                <fullName>Not Reproducible</fullName>
+                <default>false</default>
+                <label>Not Reproducible</label>
+            </value>
+            <value>
+                <fullName>Removed Requirement</fullName>
+                <default>false</default>
+                <label>Removed Requirement</label>
+            </value>
+            <value>
+                <fullName>Test Process Error</fullName>
+                <default>false</default>
+                <label>Test Process Error</label>
+            </value>
+            <value>
+                <fullName>Works As Designed</fullName>
+                <default>false</default>
+                <label>Works As Designed</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Changed Requirement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Environment Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Functionality Out of Scope</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Incorrect Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Misunderstood Requirement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Not Reproducible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Removed Requirement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Test Process Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Works As Designed</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

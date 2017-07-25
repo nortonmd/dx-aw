@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprints_with_Tags</fullName>
+    <columns>NAME</columns>
+    <columns>Base_Tag__c</columns>
+    <columns>Release_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Base_Tag__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Sprints with Tags</label>
+</ListView>

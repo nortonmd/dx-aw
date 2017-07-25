@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resource_Capacity__c</fullName>
+    <description>Total number of hours Resources are available for this sprint.</description>
+    <externalId>false</externalId>
+    <label>Resource Capacity</label>
+    <summarizedField>CM_Capacity__c.Hours_Available__c</summarizedField>
+    <summaryForeignKey>CM_Capacity__c.Sprint__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

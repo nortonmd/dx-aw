@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_To_Demo__c</fullName>
+    <description>Description of how to demonstrate the item.  
+NOT how to smoke test.
+NOT how to QA.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Description of how to demonstrate the item.  
+NOT how to smoke test.
+NOT how to QA.
+How to demonstrate.  This may include calling out specific user to use while demonstrating and specific environments.</inlineHelpText>
+    <label>How To Demo</label>
+    <length>32000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

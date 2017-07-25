@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Environment</fullName>
+    <active>true</active>
+    <description>New Environment Request.  Request for a new sandbox.</description>
+    <label>New Environment</label>
+    <picklistValues>
+        <picklist>Sandbox_Type__c</picklist>
+        <values>
+            <fullName>Config Only %28500MB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developer %2810MB%29</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Full Copy %28Same as Prod%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Smart_Nav_Action__c</picklist>
+        <values>
+            <fullName>Create Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Make Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Make a Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other - Not Listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retrieve Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>View Bills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>View Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>View Offer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

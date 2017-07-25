@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SFDC_2012_QA_and_UAT</fullName>
+    <columns>NAME</columns>
+    <columns>QA_Deploy_Date__c</columns>
+    <columns>QA_Signoff_Date__c</columns>
+    <columns>UAT_Deploy_Date__c</columns>
+    <columns>UAT_Signoff_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>[SFDC]</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>2012</value>
+    </filters>
+    <label>[SFDC] 2012 QA and UAT</label>
+</ListView>
