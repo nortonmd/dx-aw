@@ -5,9 +5,7 @@ Agile Way as a DX project
 
 ## Resources
 
-
 ## Description of Files and Directories
-
 
 ## Issues
 
