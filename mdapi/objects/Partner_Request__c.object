@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Requests made from partner organizations</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Implementation_Hours__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of hours it takes to implement the request</inlineHelpText>
+        <label>Implementation Hours</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Implementation_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any notes on the implementation.  Difficulties, Special Instructions, Comments to the Requester.</inlineHelpText>
+        <label>Implementation Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>New_URL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The URL that points to the new location</inlineHelpText>
+        <label>New URL</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>PR_ID__c</fullName>
+        <displayFormat>PR-{0000}</displayFormat>
+        <externalId>true</externalId>
+        <inlineHelpText>Automatically generated ID to track requests.</inlineHelpText>
+        <label>PR ID</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Requested_Delivery_Date__c</fullName>
+        <defaultValue>Today() + 7</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Requested date of delivery.</inlineHelpText>
+        <label>Requested Delivery Date</label>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Sandbox_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The sandbox name.  Example (TEST1, JOE2, PASQA)</inlineHelpText>
+        <label>Sandbox Name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sandbox_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the size and data content of the sandbox</inlineHelpText>
+        <label>Sandbox Type</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Developer (10MB)</fullName>
+                    <default>true</default>
+                    <label>Developer (10MB)</label>
+                </value>
+                <value>
+                    <fullName>Config Only (500MB)</fullName>
+                    <default>false</default>
+                    <label>Config Only (500MB)</label>
+                </value>
+                <value>
+                    <fullName>Full Copy (Same as Prod)</fullName>
+                    <default>false</default>
+                    <label>Full Copy (Same as Prod)</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Smart_Nav_Action__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Smart Navigation Action for which the URL should be changed.</inlineHelpText>
+        <label>Smart Nav Action</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Create Quote</fullName>
+                    <default>false</default>
+                    <label>Create Quote</label>
+                </value>
+                <value>
+                    <fullName>Retrieve Quote</fullName>
+                    <default>false</default>
+                    <label>Retrieve Quote</label>
+                </value>
+                <value>
+                    <fullName>Make Changes</fullName>
+                    <default>false</default>
+                    <label>Make Changes</label>
+                </value>
+                <value>
+                    <fullName>Make a Payment</fullName>
+                    <default>false</default>
+                    <label>Make a Payment</label>
+                </value>
+                <value>
+                    <fullName>View Bills</fullName>
+                    <default>false</default>
+                    <label>View Bills</label>
+                </value>
+                <value>
+                    <fullName>View Documents</fullName>
+                    <default>false</default>
+                    <label>View Documents</label>
+                </value>
+                <value>
+                    <fullName>View Offer</fullName>
+                    <default>false</default>
+                    <label>View Offer</label>
+                </value>
+                <value>
+                    <fullName>Other - Not Listed</fullName>
+                    <default>false</default>
+                    <label>Other - Not Listed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>9</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Special_Instructions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any special instructions for the fulfillment of this request.  Who to contact when task is completed, whether or not to delay fulfilling the request before a certain date, data load requirements, etc...</inlineHelpText>
+        <label>Special Instructions</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>User_Accounts__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide the email address of the user(s) that need access.
+User names will be the email address with the sandbox name as the suffix.</inlineHelpText>
+        <label>User Accounts</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <label>Partner Request</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>PR_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Requested_Delivery_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>PR_Hours</fullName>
+        <columns>PR_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Implementation_Hours__c</columns>
+        <columns>Implementation_Notes__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <label>PR Hours</label>
+    </listViews>
+    <listViews>
+        <fullName>PR_Hours_Reporting</fullName>
+        <columns>PR_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>Implementation_Hours__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Implementation_Hours__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>PR Hours Reporting</label>
+    </listViews>
+    <nameField>
+        <label>Partner Request Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Partner Requests</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Environment_Access</fullName>
+        <active>true</active>
+        <description>Request to provide access to an existing environment</description>
+        <label>Environment Access</label>
+        <picklistValues>
+            <picklist>Sandbox_Type__c</picklist>
+            <values>
+                <fullName>Config Only %28500MB%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer %2810MB%29</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Full Copy %28Same as Prod%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Smart_Nav_Action__c</picklist>
+            <values>
+                <fullName>Create Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make a Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other - Not Listed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retrieve Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Bills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Documents</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Offer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Generic</fullName>
+        <active>true</active>
+        <description>Generic request.  One not covered by other record types.</description>
+        <label>Generic</label>
+        <picklistValues>
+            <picklist>Sandbox_Type__c</picklist>
+            <values>
+                <fullName>Config Only %28500MB%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer %2810MB%29</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Full Copy %28Same as Prod%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Smart_Nav_Action__c</picklist>
+            <values>
+                <fullName>Create Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make a Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other - Not Listed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retrieve Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Bills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Documents</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Offer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>New_Environment</fullName>
+        <active>true</active>
+        <description>New Environment Request.  Request for a new sandbox.</description>
+        <label>New Environment</label>
+        <picklistValues>
+            <picklist>Sandbox_Type__c</picklist>
+            <values>
+                <fullName>Config Only %28500MB%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer %2810MB%29</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Full Copy %28Same as Prod%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Smart_Nav_Action__c</picklist>
+            <values>
+                <fullName>Create Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make a Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other - Not Listed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retrieve Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Bills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Documents</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Offer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>URL_Change</fullName>
+        <active>true</active>
+        <description>Change the URL for a Smart Navigation.</description>
+        <label>URL Change</label>
+        <picklistValues>
+            <picklist>Sandbox_Type__c</picklist>
+            <values>
+                <fullName>Config Only %28500MB%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer %2810MB%29</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Full Copy %28Same as Prod%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Smart_Nav_Action__c</picklist>
+            <values>
+                <fullName>Create Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make Changes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Make a Payment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other - Not Listed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retrieve Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Bills</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Documents</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>View Offer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

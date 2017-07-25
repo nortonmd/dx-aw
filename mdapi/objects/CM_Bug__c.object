@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>New bugs get assigned to the Developer.
+When the bug is fixed this should be the QA Lead.</inlineHelpText>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Bugs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BackLog_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Backlog_Item__r.BackLog_ID__c</formula>
+        <label>BackLog Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Backlog_Item__c</fullName>
+        <externalId>false</externalId>
+        <label>Backlog Item</label>
+        <referenceTo>CM_Backlog_Item__c</referenceTo>
+        <relationshipLabel>Bugs</relationshipLabel>
+        <relationshipName>Bugs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Business_Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Priority</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1-Critical</fullName>
+                    <default>false</default>
+                    <label>1-Critical</label>
+                </value>
+                <value>
+                    <fullName>2-High</fullName>
+                    <default>false</default>
+                    <label>2-High</label>
+                </value>
+                <value>
+                    <fullName>3-Medium</fullName>
+                    <default>false</default>
+                    <label>3-Medium</label>
+                </value>
+                <value>
+                    <fullName>4-Low</fullName>
+                    <default>false</default>
+                    <label>4-Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Detected_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Detected By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Bugs1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Developer_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Developer Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Environment__c</fullName>
+        <externalId>false</externalId>
+        <label>Environment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PQA</fullName>
+                    <default>true</default>
+                    <label>PQA</label>
+                </value>
+                <value>
+                    <fullName>PUAT</fullName>
+                    <default>false</default>
+                    <label>PUAT</label>
+                </value>
+                <value>
+                    <fullName>MQA</fullName>
+                    <default>false</default>
+                    <label>MQA</label>
+                </value>
+                <value>
+                    <fullName>MUAT</fullName>
+                    <default>false</default>
+                    <label>MUAT</label>
+                </value>
+                <value>
+                    <fullName>MUAT2</fullName>
+                    <default>false</default>
+                    <label>MUAT2</label>
+                </value>
+                <value>
+                    <fullName>Production</fullName>
+                    <default>false</default>
+                    <label>Production</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Feature__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Feature</label>
+        <referenceTo>CM_Feature__c</referenceTo>
+        <relationshipLabel>Bugs</relationshipLabel>
+        <relationshipName>Bugs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Fix_Sprint__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The sprint in which the bug will be fixed.</inlineHelpText>
+        <label>Fix Sprint</label>
+        <referenceTo>CM_Sprint__c</referenceTo>
+        <relationshipLabel>Bugs</relationshipLabel>
+        <relationshipName>Bugs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Functional_Area__c</fullName>
+        <externalId>false</externalId>
+        <label>Functional Area</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CSRR</fullName>
+                    <default>false</default>
+                    <label>CSRR</label>
+                </value>
+                <value>
+                    <fullName>Customer Search</fullName>
+                    <default>false</default>
+                    <label>Customer Search</label>
+                </value>
+                <value>
+                    <fullName>DMV Services</fullName>
+                    <default>false</default>
+                    <label>DMV Services</label>
+                </value>
+                <value>
+                    <fullName>Internet Leads</fullName>
+                    <default>false</default>
+                    <label>Internet Leads</label>
+                </value>
+                <value>
+                    <fullName>Lead and Opportunity Management</fullName>
+                    <default>false</default>
+                    <label>Lead and Opportunity Management</label>
+                </value>
+                <value>
+                    <fullName>Lead Internal Referral</fullName>
+                    <default>false</default>
+                    <label>Lead Internal Referral</label>
+                </value>
+                <value>
+                    <fullName>Member Experience</fullName>
+                    <default>false</default>
+                    <label>Member Experience</label>
+                </value>
+                <value>
+                    <fullName>Membership Subscription Platform</fullName>
+                    <default>false</default>
+                    <label>Membership Subscription Platform</label>
+                </value>
+                <value>
+                    <fullName>Smart Navigation</fullName>
+                    <default>false</default>
+                    <label>Smart Navigation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Group_Tag__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Tag for logical grouping</inlineHelpText>
+        <label>Group Tag</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority_Ranking__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Numeric value for the priority of the bug.  Higher numbers are higher priority.</inlineHelpText>
+        <label>Priority Ranking</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1) High</fullName>
+                    <default>false</default>
+                    <label>1) High</label>
+                </value>
+                <value>
+                    <fullName>2) Medium</fullName>
+                    <default>false</default>
+                    <label>2) Medium</label>
+                </value>
+                <value>
+                    <fullName>3) Low</fullName>
+                    <default>false</default>
+                    <label>3) Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ACA Partner Clubs: PRO2213</fullName>
+                    <default>false</default>
+                    <label>ACA Partner Clubs: PRO2213</label>
+                </value>
+                <value>
+                    <fullName>Agent Master</fullName>
+                    <default>false</default>
+                    <label>Agent Master</label>
+                </value>
+                <value>
+                    <fullName>AWP/Contact Strategy</fullName>
+                    <default>false</default>
+                    <label>AWP/Contact Strategy</label>
+                </value>
+                <value>
+                    <fullName>Business Operations: Cost Center 4</fullName>
+                    <default>false</default>
+                    <label>Business Operations: Cost Center 4</label>
+                </value>
+                <value>
+                    <fullName>Campaign/Lead Tracker Project: PRO2755</fullName>
+                    <default>false</default>
+                    <label>Campaign/Lead Tracker Project: PRO2755</label>
+                </value>
+                <value>
+                    <fullName>CMNG: 67109B0</fullName>
+                    <default>false</default>
+                    <label>CMNG: 67109B0</label>
+                </value>
+                <value>
+                    <fullName>Defects/KTLO; 2326-533</fullName>
+                    <default>false</default>
+                    <label>Defects/KTLO; 2326-533</label>
+                </value>
+                <value>
+                    <fullName>DMV Project: PRO2746</fullName>
+                    <default>false</default>
+                    <label>DMV Project: PRO2746</label>
+                </value>
+                <value>
+                    <fullName>Market 1</fullName>
+                    <default>false</default>
+                    <label>Market 1</label>
+                </value>
+                <value>
+                    <fullName>Member Experience: 67209B0</fullName>
+                    <default>false</default>
+                    <label>Member Experience: 67209B0</label>
+                </value>
+                <value>
+                    <fullName>Membership Project: 65608I1</fullName>
+                    <default>false</default>
+                    <label>Membership Project: 65608I1</label>
+                </value>
+                <value>
+                    <fullName>MRM Sales (Life)</fullName>
+                    <default>false</default>
+                    <label>MRM Sales (Life)</label>
+                </value>
+                <value>
+                    <fullName>MRM Sales (NV/UT): 67110C0</fullName>
+                    <default>false</default>
+                    <label>MRM Sales (NV/UT): 67110C0</label>
+                </value>
+                <value>
+                    <fullName>MRM Service (MP2 Enablement): 67109B0</fullName>
+                    <default>false</default>
+                    <label>MRM Service (MP2 Enablement): 67109B0</label>
+                </value>
+                <value>
+                    <fullName>Online Quote Project: 65611GO</fullName>
+                    <default>false</default>
+                    <label>Online Quote Project: 65611GO</label>
+                </value>
+                <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                    <label>Others</label>
+                </value>
+                <value>
+                    <fullName>Projects</fullName>
+                    <default>false</default>
+                    <label>Projects</label>
+                </value>
+                <value>
+                    <fullName>Sales Action Planning (SAP)</fullName>
+                    <default>false</default>
+                    <label>Sales Action Planning (SAP)</label>
+                </value>
+                <value>
+                    <fullName>Specialty Products: 67409B1</fullName>
+                    <default>false</default>
+                    <label>Specialty Products: 67409B1</label>
+                </value>
+                <value>
+                    <fullName>Sprint Management</fullName>
+                    <default>false</default>
+                    <label>Sprint Management</label>
+                </value>
+                <value>
+                    <fullName>Technical Operations: 2326-533</fullName>
+                    <default>false</default>
+                    <label>Technical Operations: 2326-533</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>QC_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>QC URL</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Rejection__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Rejection</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Status__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Changed Requirement</fullName>
+                    <default>false</default>
+                    <label>Changed Requirement</label>
+                </value>
+                <value>
+                    <fullName>Environment Issue</fullName>
+                    <default>false</default>
+                    <label>Environment Issue</label>
+                </value>
+                <value>
+                    <fullName>Functionality Out of Scope</fullName>
+                    <default>false</default>
+                    <label>Functionality Out of Scope</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Data</fullName>
+                    <default>false</default>
+                    <label>Incorrect Data</label>
+                </value>
+                <value>
+                    <fullName>Misunderstood Requirement</fullName>
+                    <default>false</default>
+                    <label>Misunderstood Requirement</label>
+                </value>
+                <value>
+                    <fullName>Not Reproducible</fullName>
+                    <default>false</default>
+                    <label>Not Reproducible</label>
+                </value>
+                <value>
+                    <fullName>Removed Requirement</fullName>
+                    <default>false</default>
+                    <label>Removed Requirement</label>
+                </value>
+                <value>
+                    <fullName>Test Process Error</fullName>
+                    <default>false</default>
+                    <label>Test Process Error</label>
+                </value>
+                <value>
+                    <fullName>Works As Designed</fullName>
+                    <default>false</default>
+                    <label>Works As Designed</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Changed Requirement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Environment Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Functionality Out of Scope</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Incorrect Data</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Misunderstood Requirement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Not Reproducible</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Removed Requirement</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Test Process Error</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Rejected</controllingFieldValue>
+                <valueName>Works As Designed</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Requirement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Requirement</label>
+        <referenceTo>CM_Requirement__c</referenceTo>
+        <relationshipLabel>Bugs</relationshipLabel>
+        <relationshipName>Bugs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Root_Cause__c</fullName>
+        <externalId>false</externalId>
+        <label>Root Cause</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Code Deployment</fullName>
+                    <default>false</default>
+                    <label>Code Deployment</label>
+                </value>
+                <value>
+                    <fullName>Coding</fullName>
+                    <default>false</default>
+                    <label>Coding</label>
+                </value>
+                <value>
+                    <fullName>Data Setup</fullName>
+                    <default>false</default>
+                    <label>Data Setup</label>
+                </value>
+                <value>
+                    <fullName>Existing Production Issue</fullName>
+                    <default>false</default>
+                    <label>Existing Production Issue</label>
+                </value>
+                <value>
+                    <fullName>Requirement Change</fullName>
+                    <default>false</default>
+                    <label>Requirement Change</label>
+                </value>
+                <value>
+                    <fullName>Training Issue</fullName>
+                    <default>false</default>
+                    <label>Training Issue</label>
+                </value>
+                <value>
+                    <fullName>User Access</fullName>
+                    <default>false</default>
+                    <label>User Access</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sprint__c</fullName>
+        <externalId>false</externalId>
+        <formula>Backlog_Item__r.Sprint__r.Name</formula>
+        <label>Sprint</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Change to &quot;Fixed&quot; after the bug has been resolved and reassign to the QA Lead.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <color>#FF0000</color>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Fixed</fullName>
+                    <color>#78C953</color>
+                    <default>false</default>
+                    <label>Fixed</label>
+                </value>
+                <value>
+                    <fullName>Re-Opened</fullName>
+                    <color>#E27001</color>
+                    <default>false</default>
+                    <label>Re-Opened</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <color>#33CC00</color>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Under Review</fullName>
+                    <color>#F3D904</color>
+                    <default>false</default>
+                    <label>Under Review</label>
+                </value>
+                <value>
+                    <fullName>Deferred</fullName>
+                    <color>#A53711</color>
+                    <default>false</default>
+                    <label>Deferred</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <color>#66E9BD</color>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Target_Fix_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Target Fix Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Test_Severity__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Severity</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1-Critical</fullName>
+                    <default>false</default>
+                    <label>1-Critical</label>
+                </value>
+                <value>
+                    <fullName>2-High</fullName>
+                    <default>false</default>
+                    <label>2-High</label>
+                </value>
+                <value>
+                    <fullName>3-Medium</fullName>
+                    <default>false</default>
+                    <label>3-Medium</label>
+                </value>
+                <value>
+                    <fullName>4-Low</fullName>
+                    <default>false</default>
+                    <label>4-Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Test_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>System</fullName>
+                    <default>false</default>
+                    <label>System</label>
+                </value>
+                <value>
+                    <fullName>SIT</fullName>
+                    <default>false</default>
+                    <label>SIT</label>
+                </value>
+                <value>
+                    <fullName>Regression</fullName>
+                    <default>false</default>
+                    <label>Regression</label>
+                </value>
+                <value>
+                    <fullName>Data Validation</fullName>
+                    <default>false</default>
+                    <label>Data Validation</label>
+                </value>
+                <value>
+                    <fullName>UAT</fullName>
+                    <default>false</default>
+                    <label>UAT</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Bug</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Description__c</columns>
+        <columns>QC_URL__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Daves_Bugs</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>All Open Bugs</label>
+    </listViews>
+    <listViews>
+        <fullName>Daves_Bugs_June</fullName>
+        <columns>NAME</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>equals</operation>
+            <value>[SFDC] June 2012</value>
+        </filters>
+        <label>All Open Bugs June</label>
+    </listViews>
+    <listViews>
+        <fullName>Daves_Bugs_March</fullName>
+        <columns>NAME</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>equals</operation>
+            <value>[SFDC] March 2012</value>
+        </filters>
+        <label>All Open Bugs March</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership</value>
+        </filters>
+        <label>Membership Project Bugs</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_All</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership</value>
+        </filters>
+        <label>Membership Project Bugs All</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_Critical</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <filters>
+            <field>Business_Priority__c</field>
+            <operation>equals</operation>
+            <value>1-Critical</value>
+        </filters>
+        <label>Membership Project Bugs - Critical</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_High</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <filters>
+            <field>Business_Priority__c</field>
+            <operation>equals</operation>
+            <value>2-High</value>
+        </filters>
+        <label>Membership Project Bugs - High</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_Open</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Priority_Ranking__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <label>Membership Project Bugs - Open</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_Sprint_1</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership - Sprint 1</value>
+        </filters>
+        <label>Membership Project Bugs - Sprint 1</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_Sprint_2_All</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership - Sprint 2</value>
+        </filters>
+        <label>Membership Project Bugs - Sprint 2 All</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_Sprint_2_Open</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership - Sprint 2</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <label>Membership Project Bugs - Sprint 2 Open</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_Sprint_3_Open</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership - Sprint 3</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <label>Membership Project Bugs - Sprint 3 Open</label>
+    </listViews>
+    <listViews>
+        <fullName>Membership_Project_Bugs_Sprint_7_5</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Status__c</columns>
+        <columns>Group_Tag__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Business_Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Fix_Sprint__c</field>
+            <operation>contains</operation>
+            <value>Membership - Sprint 7.5</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Fixed,Closed,Deferred,Rejected</value>
+        </filters>
+        <label>Membership Project Bugs - Sprint 7.5</label>
+    </listViews>
+    <listViews>
+        <fullName>Open_Bugs</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,Under Review</value>
+        </filters>
+        <label>Open Bugs</label>
+    </listViews>
+    <listViews>
+        <fullName>SFDC_December_2011_Open_Bugs</fullName>
+        <columns>Sprint__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>equals</operation>
+            <value>[SFDC] December 2011</value>
+        </filters>
+        <label>SFDC December 2011 Open Bugs</label>
+    </listViews>
+    <listViews>
+        <fullName>SFDC_January_2012_Open_Bugs</fullName>
+        <columns>NAME</columns>
+        <columns>Priority__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>equals</operation>
+            <value>[SFDC] January 2012</value>
+        </filters>
+        <label>SFDC January 2012 Open Bugs</label>
+    </listViews>
+    <listViews>
+        <fullName>September_2012_Project_Bugs</fullName>
+        <columns>NAME</columns>
+        <columns>BackLog_Number__c</columns>
+        <columns>Sprint__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Sprint__c</field>
+            <operation>contains</operation>
+            <value>September 2012</value>
+        </filters>
+        <label>September 2012 Project Bugs</label>
+    </listViews>
+    <nameField>
+        <displayFormat>BUG-{000}</displayFormat>
+        <label>Bug Id</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Bugs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Require_Rejected_Reason</fullName>
+        <active>true</active>
+        <description>Require Rejected Reason when Status changes to Rejected</description>
+        <errorConditionFormula>AND(
+   ISPICKVAL(Status__c, &quot;Rejected&quot;),
+   ISPICKVAL(Reason_for_Rejection__c, &quot;&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>Reason_for_Rejection__c</errorDisplayField>
+        <errorMessage>Reason for Rejection is required when status is Rejected</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

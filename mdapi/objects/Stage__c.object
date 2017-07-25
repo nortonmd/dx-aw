@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Budget_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Green</fullName>
+                    <color>#009900</color>
+                    <default>true</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <color>#FFFF66</color>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Budget_Return_to_Green_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Budget Return to Green Plan</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Budget_Assessment__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Management is aware of issue, but resolution not yet defined.</fullName>
+                    <default>false</default>
+                    <label>Management is aware of issue, but resolution not yet defined.</label>
+                </value>
+                <value>
+                    <fullName>Management is aware of issue, and seeking buy-in to resolution path</fullName>
+                    <default>false</default>
+                    <label>Management is aware of issue, and seeking buy-in to resolution path</label>
+                </value>
+                <value>
+                    <fullName>Other: see comments section</fullName>
+                    <default>false</default>
+                    <label>Other: see comments section</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Management is aware of issue, but resolution not yet defined.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Management is aware of issue, and seeking buy-in to resolution path</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Other: see comments section</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>NA</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Comments_on_Deliverables__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments on Deliverables</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Health__c</fullName>
+        <externalId>false</externalId>
+        <label>Health</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Green</fullName>
+                    <default>false</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Key_Deliverable__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Key Deliverable</label>
+        <referenceTo>Deliverable__c</referenceTo>
+        <relationshipLabel>Stages</relationshipLabel>
+        <relationshipName>Stages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <referenceTo>Project__c</referenceTo>
+        <relationshipLabel>Stages</relationshipLabel>
+        <relationshipName>Stages</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Resources_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Resources Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Green</fullName>
+                    <color>#009900</color>
+                    <default>true</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <color>#FFFF66</color>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Resources_Return_to_Green_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Resources Return to Green Plan</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Resources_Assessment__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Seeking approval to secure external resources to meet schedule constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking approval to secure external resources to meet schedule constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking approval to assign incremental resources to meet from other work to meet schedule constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking approval to assign incremental resources to meet from other work to meet schedule constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking approval for schedule extension and retain team.</fullName>
+                    <default>false</default>
+                    <label>Seeking approval for schedule extension and retain team.</label>
+                </value>
+                <value>
+                    <fullName>Other: see comments section</fullName>
+                    <default>false</default>
+                    <label>Other: see comments section</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking approval to secure external resources to meet schedule constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking approval to assign incremental resources to meet from other work to meet schedule constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking approval for schedule extension and retain team.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Other: see comments section</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>NA</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Schedule_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Schedule Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Green</fullName>
+                    <color>#009900</color>
+                    <default>true</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <color>#FFFF66</color>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Schedule_Return_to_Green_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Schedule Return to Green Plan</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Schedule_Assessment__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Seeking Approval to reduce defined scope to meet budget constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce defined scope to meet budget constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking Approval to reduce defined scope to meet resource constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce defined scope to meet resource constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking Approval to reduce defined scope to meet budget and resource constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce defined scope to meet budget and resource constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking Approval to reduce or revise defined scope due to solution is not viable.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce or revise defined scope due to solution is not viable.</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce defined scope to meet budget constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce defined scope to meet resource constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce defined scope to meet budget and resource constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce or revise defined scope due to solution is not viable.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>NA</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Scope_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Scope Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Green</fullName>
+                    <color>#009900</color>
+                    <default>true</default>
+                    <label>Green</label>
+                </value>
+                <value>
+                    <fullName>Yellow</fullName>
+                    <color>#FFFF66</color>
+                    <default>false</default>
+                    <label>Yellow</label>
+                </value>
+                <value>
+                    <fullName>Red</fullName>
+                    <color>#FF0000</color>
+                    <default>false</default>
+                    <label>Red</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Scope_Return_to_Green_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Scope Return to Green Plan</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Scope_Assessment__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Seeking Approval to reduce defined scope to meet budget constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce defined scope to meet budget constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking Approval to reduce defined scope to meet resource constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce defined scope to meet resource constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking Approval to reduce defined scope to meet budget and resource constraints.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce defined scope to meet budget and resource constraints.</label>
+                </value>
+                <value>
+                    <fullName>Seeking Approval to reduce or revise defined scope due to solution is not viable.</fullName>
+                    <default>false</default>
+                    <label>Seeking Approval to reduce or revise defined scope due to solution is not viable.</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce defined scope to meet budget constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce defined scope to meet resource constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce defined scope to meet budget and resource constraints.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>Seeking Approval to reduce or revise defined scope due to solution is not viable.</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Yellow</controllingFieldValue>
+                <controllingFieldValue>Red</controllingFieldValue>
+                <valueName>NA</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Seeking_Management_Support__c</fullName>
+        <externalId>false</externalId>
+        <label>Seeking Management Support</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Discover</fullName>
+                    <default>true</default>
+                    <label>Discover</label>
+                </value>
+                <value>
+                    <fullName>Define</fullName>
+                    <default>false</default>
+                    <label>Define</label>
+                </value>
+                <value>
+                    <fullName>Design</fullName>
+                    <default>false</default>
+                    <label>Design</label>
+                </value>
+                <value>
+                    <fullName>Develop-Build</fullName>
+                    <default>false</default>
+                    <label>Develop-Build</label>
+                </value>
+                <value>
+                    <fullName>Develop-Test</fullName>
+                    <default>false</default>
+                    <label>Develop-Test</label>
+                </value>
+                <value>
+                    <fullName>Deploy</fullName>
+                    <default>false</default>
+                    <label>Deploy</label>
+                </value>
+                <value>
+                    <fullName>Support</fullName>
+                    <default>false</default>
+                    <label>Support</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Stage</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Stage Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Stages</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

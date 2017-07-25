@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This Change Management object contains each changed component for a specific backlog item.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Backlog_Item__c</fullName>
+        <description>This relationship shows the parent Backlog Item to which these components are associated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For which Backlog Item has this component been changed?</inlineHelpText>
+        <label>Backlog Item</label>
+        <referenceTo>CM_Backlog_Item__c</referenceTo>
+        <relationshipLabel>Components</relationshipLabel>
+        <relationshipName>Components</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Code_Review_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Code Review Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Code_Reviewer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Code Reviewer</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Component_Type__c</fullName>
+        <description>Type of component/module  that was changed.</description>
+        <externalId>false</externalId>
+        <label>Component Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Class</fullName>
+                    <default>false</default>
+                    <label>Class</label>
+                </value>
+                <value>
+                    <fullName>Test Class</fullName>
+                    <default>false</default>
+                    <label>Test Class</label>
+                </value>
+                <value>
+                    <fullName>Component</fullName>
+                    <default>false</default>
+                    <label>Component</label>
+                </value>
+                <value>
+                    <fullName>Page</fullName>
+                    <default>false</default>
+                    <label>Page</label>
+                </value>
+                <value>
+                    <fullName>Page Layout</fullName>
+                    <default>false</default>
+                    <label>Page Layout</label>
+                </value>
+                <value>
+                    <fullName>Trigger</fullName>
+                    <default>false</default>
+                    <label>Trigger</label>
+                </value>
+                <value>
+                    <fullName>Static Resource</fullName>
+                    <default>false</default>
+                    <label>Static Resource</label>
+                </value>
+                <value>
+                    <fullName>Apex: Anonymous Script</fullName>
+                    <default>false</default>
+                    <label>Apex: Anonymous Script</label>
+                </value>
+                <value>
+                    <fullName>Report Type</fullName>
+                    <default>false</default>
+                    <label>Report Type</label>
+                </value>
+                <value>
+                    <fullName>Object: Entire Object</fullName>
+                    <default>false</default>
+                    <label>Object: Entire Object</label>
+                </value>
+                <value>
+                    <fullName>Object: Field</fullName>
+                    <default>false</default>
+                    <label>Object: Field</label>
+                </value>
+                <value>
+                    <fullName>Object: Custom Button (Weblink)</fullName>
+                    <default>false</default>
+                    <label>Object: Custom Button (Weblink)</label>
+                </value>
+                <value>
+                    <fullName>Object: Custom Link (Weblink)</fullName>
+                    <default>false</default>
+                    <label>Object: Custom Link (Weblink)</label>
+                </value>
+                <value>
+                    <fullName>Object: Action Override</fullName>
+                    <default>false</default>
+                    <label>Object: Action Override</label>
+                </value>
+                <value>
+                    <fullName>Object: Business Process</fullName>
+                    <default>false</default>
+                    <label>Object: Business Process</label>
+                </value>
+                <value>
+                    <fullName>Object: Field Set</fullName>
+                    <default>false</default>
+                    <label>Object: Field Set</label>
+                </value>
+                <value>
+                    <fullName>Object: ListView</fullName>
+                    <default>false</default>
+                    <label>Object: ListView</label>
+                </value>
+                <value>
+                    <fullName>Object: Named Filter</fullName>
+                    <default>false</default>
+                    <label>Object: Named Filter</label>
+                </value>
+                <value>
+                    <fullName>Object: Record Type</fullName>
+                    <default>false</default>
+                    <label>Object: Record Type</label>
+                </value>
+                <value>
+                    <fullName>Object: Search Layout</fullName>
+                    <default>false</default>
+                    <label>Object: Search Layout</label>
+                </value>
+                <value>
+                    <fullName>Object: Validation Rule</fullName>
+                    <default>false</default>
+                    <label>Object: Validation Rule</label>
+                </value>
+                <value>
+                    <fullName>Workflow: Entire Workflow</fullName>
+                    <default>false</default>
+                    <label>Workflow: Entire Workflow</label>
+                </value>
+                <value>
+                    <fullName>Workflow: Rule</fullName>
+                    <default>false</default>
+                    <label>Workflow: Rule</label>
+                </value>
+                <value>
+                    <fullName>Workflow: Field Update</fullName>
+                    <default>false</default>
+                    <label>Workflow: Field Update</label>
+                </value>
+                <value>
+                    <fullName>Workflow: Alert</fullName>
+                    <default>false</default>
+                    <label>Workflow: Alert</label>
+                </value>
+                <value>
+                    <fullName>Workflow: Outbound Message</fullName>
+                    <default>false</default>
+                    <label>Workflow: Outbound Message</label>
+                </value>
+                <value>
+                    <fullName>Workflow: Task</fullName>
+                    <default>false</default>
+                    <label>Workflow: Task</label>
+                </value>
+                <value>
+                    <fullName>Custom Application</fullName>
+                    <default>false</default>
+                    <label>Custom Application</label>
+                </value>
+                <value>
+                    <fullName>Custom Label</fullName>
+                    <default>false</default>
+                    <label>Custom Label</label>
+                </value>
+                <value>
+                    <fullName>Custom Site</fullName>
+                    <default>false</default>
+                    <label>Custom Site</label>
+                </value>
+                <value>
+                    <fullName>Custom Tab</fullName>
+                    <default>false</default>
+                    <label>Custom Tab</label>
+                </value>
+                <value>
+                    <fullName>Folder Item: Dashboard</fullName>
+                    <default>false</default>
+                    <label>Folder Item: Dashboard</label>
+                </value>
+                <value>
+                    <fullName>Folder Item: Document</fullName>
+                    <default>false</default>
+                    <label>Folder Item: Document</label>
+                </value>
+                <value>
+                    <fullName>Folder Item: Email Template</fullName>
+                    <default>false</default>
+                    <label>Folder Item: Email Template</label>
+                </value>
+                <value>
+                    <fullName>Folder Item: Report</fullName>
+                    <default>false</default>
+                    <label>Folder Item: Report</label>
+                </value>
+                <value>
+                    <fullName>Home Page Component</fullName>
+                    <default>false</default>
+                    <label>Home Page Component</label>
+                </value>
+                <value>
+                    <fullName>Home Page Layout</fullName>
+                    <default>false</default>
+                    <label>Home Page Layout</label>
+                </value>
+                <value>
+                    <fullName>Home Page Web Links</fullName>
+                    <default>false</default>
+                    <label>Home Page Web Links</label>
+                </value>
+                <value>
+                    <fullName>Process</fullName>
+                    <default>false</default>
+                    <label>Process</label>
+                </value>
+                <value>
+                    <fullName>Sub Process</fullName>
+                    <default>false</default>
+                    <label>Sub Process</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Deployment_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Deployment Action</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Create</fullName>
+                    <default>false</default>
+                    <label>Create</label>
+                </value>
+                <value>
+                    <fullName>Update</fullName>
+                    <default>true</default>
+                    <label>Update</label>
+                </value>
+                <value>
+                    <fullName>Delete</fullName>
+                    <default>false</default>
+                    <label>Delete</label>
+                </value>
+                <value>
+                    <fullName>Deploy</fullName>
+                    <default>false</default>
+                    <label>Deploy</label>
+                </value>
+                <value>
+                    <fullName>Deploy and Schedule</fullName>
+                    <default>false</default>
+                    <label>Deploy and Schedule</label>
+                </value>
+                <value>
+                    <fullName>Remove</fullName>
+                    <default>false</default>
+                    <label>Remove</label>
+                </value>
+                <value>
+                    <fullName>Revert</fullName>
+                    <default>false</default>
+                    <label>Revert</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Git_Diff_Command_Line__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL(Deployment_Action__c, &apos;Update&apos;),
+&quot;git difftool &quot; + Backlog_Item__r.Sprint__r.Base_Tag__c + &quot; &quot; +
+CASE(
+     TEXT(Component_Type__c ), &apos;Class&apos;, &apos;src/classes&apos;, &apos;Test Class&apos;, &apos;src/classes&apos;, &apos;Page&apos;, &apos;src/pages&apos;, &apos;Trigger&apos;, &apos;src/triggers&apos;, &apos;Component&apos;, &apos;src/components&apos;, &apos;Apex: Anonymous Script&apos;, &apos;scripts&apos;, &apos;other&apos;
+            )
+ + &quot;/&quot; +  Name,
+&apos;Not Available on Create&apos;)</formula>
+        <label>Git Diff Command Line</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Github_com_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Requires_Review__c, 
+HYPERLINK( &quot;https://github.com/aaancnu/mrm/blob/master/&quot; +
+CASE(
+TEXT(Component_Type__c ), &apos;Class&apos;, &apos;src/classes&apos;, &apos;Test Class&apos;, &apos;src/classes&apos;, &apos;Page&apos;, &apos;src/pages&apos;, &apos;Trigger&apos;, &apos;src/triggers&apos;, &apos;Component&apos;, &apos;src/components&apos;, &apos;Apex: Anonymous Script&apos;, &apos;scripts&apos;,  &apos;Static Resource&apos;, &apos;src/staticresources&apos;, &apos;other&apos;
+)
++ &quot;/&quot; + Name, &quot;File on Github.com&quot;),
+&quot;Not stored on Github.com&quot;)</formula>
+        <label>Github.com Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_to_Process__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Drop in the link to the Boomi Process</inlineHelpText>
+        <label>Link to Process</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Requires_Review__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Requires Review</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Component__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Source Component</label>
+        <referenceTo>Source_Component__c</referenceTo>
+        <relationshipLabel>Components</relationshipLabel>
+        <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sprint__c</fullName>
+        <externalId>false</externalId>
+        <formula>Backlog_Item__r.Sprint__r.Name</formula>
+        <label>Sprint</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Component</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Deployment_Action__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>Component_Type__c</columns>
+        <columns>Requires_Review__c</columns>
+        <columns>Code_Review_Date__c</columns>
+        <columns>Code_Reviewer__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Deletes</fullName>
+        <columns>NAME</columns>
+        <columns>Deployment_Action__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>Component_Type__c</columns>
+        <columns>Requires_Review__c</columns>
+        <columns>Code_Review_Date__c</columns>
+        <columns>Code_Reviewer__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Deployment_Action__c</field>
+            <operation>equals</operation>
+            <value>Delete</value>
+        </filters>
+        <label>All Deletes</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Deletes_Related_to_Address_Managemen</fullName>
+        <columns>NAME</columns>
+        <columns>Deployment_Action__c</columns>
+        <columns>Backlog_Item__c</columns>
+        <columns>Component_Type__c</columns>
+        <columns>Requires_Review__c</columns>
+        <columns>Code_Review_Date__c</columns>
+        <columns>Code_Reviewer__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Deployment_Action__c</field>
+            <operation>equals</operation>
+            <value>Delete</value>
+        </filters>
+        <filters>
+            <field>Backlog_Item__c</field>
+            <operation>equals</operation>
+            <value>Remove References to Address Management</value>
+        </filters>
+        <filters>
+            <field>Component_Type__c</field>
+            <operation>equals</operation>
+            <value>Object: Field</value>
+        </filters>
+        <label>All Deletes Related to Address Managemen</label>
+    </listViews>
+    <nameField>
+        <label>Component Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Components</pluralLabel>
+    <recordTypes>
+        <fullName>Boomi_Process</fullName>
+        <active>true</active>
+        <description>Boomi Process/Sub Process</description>
+        <label>Boomi Process</label>
+        <picklistValues>
+            <picklist>Component_Type__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sub Process</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deployment_Action__c</picklist>
+            <values>
+                <fullName>Deploy</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Deploy and Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Remove</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revert</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Salesforce_Component</fullName>
+        <active>true</active>
+        <description>Salesforce Component (Apex Class, Visualforce Page, Trigger, etc...)</description>
+        <label>Salesforce Component</label>
+        <picklistValues>
+            <picklist>Component_Type__c</picklist>
+            <values>
+                <fullName>Apex%3A Anonymous Script</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Class</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Application</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Label</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Tab</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Folder Item%3A Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Folder Item%3A Document</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Folder Item%3A Email Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Folder Item%3A Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Page Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Page Layout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Page Web Links</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Action Override</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Business Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Custom Button %28Weblink%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Custom Link %28Weblink%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Entire Object</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Field</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Field Set</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A ListView</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Named Filter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Record Type</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Search Layout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Object%3A Validation Rule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Page</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report Type</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Static Resource</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Class</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trigger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow%3A Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow%3A Entire Workflow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow%3A Field Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow%3A Outbound Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow%3A Rule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow%3A Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deployment_Action__c</picklist>
+            <values>
+                <fullName>Create</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Sprint__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Backlog_Item__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>File_Extension_Required</fullName>
+        <active>true</active>
+        <description>This rule ensures that the developer includes a file extension for components of component type &quot;Class&quot; (.class), &quot;Test Class&quot; (.class), &quot;Page&quot; (.page), &quot;Trigger&quot;(.trigger), &quot;Component&quot;(.component), &quot;Apex: Anonymous Script&quot; (.anon)</description>
+        <errorConditionFormula>NOT(
+    CONTAINS( Name, 
+           CASE(TEXT(Component_Type__c ), 
+                 &apos;Class&apos;, &apos;.cls&apos;, 
+                 &apos;Test Class&apos;, &apos;.cls&apos;, 
+                 &apos;Page&apos;, &apos;.page&apos;, 
+                 &apos;Trigger&apos;, &apos;.trigger&apos;, 
+                 &apos;Component&apos;, &apos;.component&apos;, 
+                &apos;Apex: Anonymous Script&apos;, &apos;.anon&apos;,
+                 Name
+          ) 
+    )
+)</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Please include a file extension in the Name of the component. (.cls, .page, .trigger, .component, .anon)</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

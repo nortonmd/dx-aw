@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>BR_ID__c</fullName>
+        <displayFormat>BR-{0000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>An automatic number generated when the request is created to uniquely identify the record.</inlineHelpText>
+        <label>BR ID</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Backlog_Item_Spawned__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The Backlog Item that was spawned as a result of the approval of this business request.</inlineHelpText>
+        <label>Backlog Item Spawned</label>
+        <referenceTo>CM_Backlog_Item__c</referenceTo>
+        <relationshipLabel>Business Requests</relationshipLabel>
+        <relationshipName>Business_Requests</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The category that represents  the benefit of the business request.</inlineHelpText>
+        <label>Category</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Data Quality</fullName>
+                    <default>false</default>
+                    <label>Data Quality</label>
+                </value>
+                <value>
+                    <fullName>Deployment</fullName>
+                    <default>false</default>
+                    <label>Deployment</label>
+                </value>
+                <value>
+                    <fullName>IE Requests</fullName>
+                    <default>false</default>
+                    <label>IE Requests</label>
+                </value>
+                <value>
+                    <fullName>Member Experience</fullName>
+                    <default>false</default>
+                    <label>Member Experience</label>
+                </value>
+                <value>
+                    <fullName>Membership Project</fullName>
+                    <default>false</default>
+                    <label>Membership Project</label>
+                </value>
+                <value>
+                    <fullName>New Functionality</fullName>
+                    <default>false</default>
+                    <label>New Functionality</label>
+                </value>
+                <value>
+                    <fullName>New Products</fullName>
+                    <default>false</default>
+                    <label>New Products</label>
+                </value>
+                <value>
+                    <fullName>Performance</fullName>
+                    <default>false</default>
+                    <label>Performance</label>
+                </value>
+                <value>
+                    <fullName>UI/UX</fullName>
+                    <default>false</default>
+                    <label>UI/UX</label>
+                </value>
+                <value>
+                    <fullName>Workflow Improvement</fullName>
+                    <default>false</default>
+                    <label>Workflow Improvement</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The crux of the business request.  Enough information to adequately define your objectives and start a meaningful conversation on the request.</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Implementation_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Manually updated field showing the implementation status of a business request.</inlineHelpText>
+        <label>Implementation Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>true</default>
+                    <label>Not Started</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Implemented</fullName>
+                    <default>false</default>
+                    <label>Implemented</label>
+                </value>
+                <value>
+                    <fullName>Implemented - Hidden</fullName>
+                    <default>false</default>
+                    <label>Implemented - Hidden</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Membership_Experience_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How will implementing this request improve the member experience?</inlineHelpText>
+        <label>Member Benefits</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>High (Must Have), Medium (Needed but can wait for few Sprints), Low (Nice to have)</inlineHelpText>
+        <label>Priority</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1) High</fullName>
+                    <default>false</default>
+                    <label>1) High</label>
+                </value>
+                <value>
+                    <fullName>2) Medium</fullName>
+                    <default>false</default>
+                    <label>2) Medium</label>
+                </value>
+                <value>
+                    <fullName>3) Low</fullName>
+                    <default>false</default>
+                    <label>3) Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Requested_Implementation_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The exact or approximate date you want this request fulfilled.</inlineHelpText>
+        <label>Requested Implementation Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The status of the request.  &quot;New&quot; is the default.  &quot;Approved by Business&quot; will automatically create a Backlog Item.</inlineHelpText>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Approved by Business</fullName>
+                    <default>false</default>
+                    <label>Approved by Business</label>
+                </value>
+                <value>
+                    <fullName>Waiting for more information</fullName>
+                    <default>false</default>
+                    <label>Waiting for more information</label>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                    <label>On Hold</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Business Request</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>BR_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Category__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Requested_Implementation_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Approved</fullName>
+        <columns>BR_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Category__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Requested_Implementation_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Approved by Business</value>
+        </filters>
+        <label>Approved</label>
+    </listViews>
+    <listViews>
+        <fullName>Pending_Review</fullName>
+        <columns>BR_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Category__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Requested_Implementation_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved by Business,Rejected</value>
+        </filters>
+        <label>Pending Review</label>
+    </listViews>
+    <nameField>
+        <label>BR Name</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Business Requests</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
